@@ -9,3 +9,16 @@ CREATE TABLE students (
     backend_mark INTEGER NOT NULL,
     status VARCHAR(20)
 );
+-- Create the courses table
+CREATE TABLE courses (
+    course_id SERIAL PRIMARY KEY,
+    course_name VARCHAR(100) NOT NULL,
+    credits INTEGER NOT NULL
+);
+
+-- Create the enrollment table
+CREATE TABLE enrollment (
+    enrollment_id SERIAL PRIMARY KEY,
+    student_id INTEGER REFERENCES students(student_id),
+    course_id INTEGER REFERENCES courses(course_id)
+);
