@@ -58,7 +58,7 @@ VALUES
 
 -- Query 1: Insert a new student record
 INSERT INTO students (student_name, age, email, frontend_mark, backend_mark, status)
-VALUES ('Matin Uddin', 25, 'matin@gmail.com', 45, 55, NULL);
+VALUES ('Nahid Rana', 22, 'nahid@gmail.com', 55, 58, NULL);
 -- SELECT * from students
 
 -- Query 2: Retrieve names of students enrolled in 'Next.js'
@@ -116,6 +116,6 @@ FROM students;
 
 SELECT student_name
 FROM students
-WHERE email LIKE '%example.com';
+WHERE email ILIKE '%example.com';
 
-SELECT * FROM students
+-- SELECT * FROM students
