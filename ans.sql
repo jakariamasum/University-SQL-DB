@@ -9,6 +9,9 @@ CREATE TABLE students (
     backend_mark INTEGER NOT NULL,
     status VARCHAR(20)
 );
+
+
+
 -- Create the courses table
 CREATE TABLE courses (
     course_id SERIAL PRIMARY KEY,
